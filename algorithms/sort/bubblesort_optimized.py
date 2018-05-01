@@ -1,5 +1,5 @@
 
-def bubble_sort_optimized(array):
+def bubblesort_optimized(array):
     array_len = len(array)
     swapped = False
 
@@ -24,7 +24,7 @@ def bubble_sort_optimized(array):
 
 if __name__ == '__main__':
     import time
-    from bubblesort import bubble_sort
+    from bubblesort import bubblesort
 
     unsorted_array = [2, 3, 1, 7, 4, 4, 8]
     unsorted_array2 = unsorted_array[:]
@@ -32,9 +32,9 @@ if __name__ == '__main__':
     print("Benchmark:")
 
     start_time = time.time()
-    bubble_sort(unsorted_array)
+    bubblesort(unsorted_array)
     print(f'Normal bubble sort: {time.time() - start_time}s')
 
     start_time_optimized = time.time()
-    bubble_sort_optimized(unsorted_array2)
+    bubblesort_optimized(unsorted_array2)
     print(f'Optimized bubble sort: {time.time() - start_time_optimized}s')
